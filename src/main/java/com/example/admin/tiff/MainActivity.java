@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,TifActivity.class);
                 //intent.putExtra(TifActivity.INPUT_FILE_PATH,"Tif文件路径");
-                intent.putExtra(TifActivity.INPUT_FILE_PATH,"/storage/emulated/0/Android/04.tif");
+                intent.putExtra(TifActivity.INPUT_FILE_PATH,"/storage/emulated/0/Android/03.tif");
                 startActivity(intent);
             }
         });
