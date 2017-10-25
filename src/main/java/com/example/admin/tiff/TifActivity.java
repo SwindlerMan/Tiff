@@ -18,16 +18,13 @@ import com.artifex.mupdfdemo.MuPDFReaderView;
 
 public class TifActivity extends AppCompatActivity implements FilePicker.FilePickerSupport{
     public  static final String INPUT_FILE_PATH="input_file_path";
-    private String content;
+    private String filePath;
     private RelativeLayout rl_Container;
     private MuPDFCore core;
     private MuPDFReaderView mDocView;
     private MuPDFPageAdapter adapter;
     private Context mContext;
     private TextView tv_Back;
-
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +40,8 @@ public class TifActivity extends AppCompatActivity implements FilePicker.FilePic
         });
         Bundle extras = getIntent().getExtras();
         if (extras!=null) {
-            content = extras.getString(INPUT_FILE_PATH);
-            loadTiff(content);
+            filePath = extras.getString(INPUT_FILE_PATH);
+            loadTiff(filePath);
         }
     }
 
